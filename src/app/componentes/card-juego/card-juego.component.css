@@ -1,0 +1,79 @@
+.card-img-top{
+    max-height: 13em;
+}
+.centrado{
+    text-align: center;
+}
+.inline-block{
+    display: inline-block;
+}
+.hide-overflow-text{
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+.hide-overflow-text:hover {
+    overflow: visible;
+    white-space: normal; 
+
+  }
+  .card-img{
+      width: 5rem;
+      float: left;
+  }
+  .card-title{
+      display: inline;
+  }
+ img{
+     width: 10rem;
+     height: 5rem;
+ }
+ .card-header{
+     animation-duration: 5s;
+     animation-name: transicion-De-Colores;
+ }
+
+
+ @keyframes transicion-De-Colores {
+     from{
+        background-color: rgba(255, 0, 0, 0.274);
+     }
+     50%{
+        background-color: rgba(255, 255, 0, 0.274);
+     }
+     to{
+        background-color: rgba(0, 0, 255, 0.274);
+     }
+ }
+
+ .slideInRight{
+    animation-duration: 3s;
+    animation-name: slideinRight;
+ }
+ .slideInLeft{
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slideinRight {
+    from {
+      margin-left: -100%;
+      width: 100%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+}
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }

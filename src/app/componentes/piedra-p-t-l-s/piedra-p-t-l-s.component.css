@@ -1,0 +1,195 @@
+#imgCorona{
+  width: 2em;
+  height: 2em;
+  position: relative;
+  float: right;
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+.inline-block{
+    display: inline;
+}
+#iconExit{
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 100%;
+}
+#headerCardReglas>img{
+    background-color: rgb(215, 240, 250);
+}
+#reglasDeJuego{
+    position: absolute;
+    left: 35%;
+    top: 10%;
+    z-index: 10;
+    font-weight: bold;
+}
+#imagenJuegoHover:hover
+{
+    background-color: lightblue;
+    border-radius: 25%;
+}
+#imgSpeeker:hover{
+    background-color: rgba(173, 216, 230, 0.384);
+    border-radius: 20%;    
+}
+#imgSpeeker{
+    
+    width: 30px;
+    height: 30px;
+    margin-bottom: 20px;   
+}
+.imagenJuego{
+    width: 100px;
+    height: 100px;
+}
+.hidden{
+    visibility: hidden;
+
+}
+.btnSize{
+    margin-top: 10px;
+    width: 15em;
+}
+.visible{
+    visibility: visible;
+
+}
+.centrado{
+    text-align: center;
+}
+.puntaje{
+    font-family: serif;
+    font-size: 5em;
+    margin-right: 5px;
+}
+#puntajeJugador
+{
+    background-color: rgba(27, 172, 240, 0.733);
+    border-top-left-radius: 30%;
+    border-bottom-left-radius: 30%;
+    min-width: 1em;
+}
+#puntajeMaquina
+{
+    background-color: rgba(240, 165, 27, 0.733);
+    border-top-right-radius: 30%;
+    border-bottom-right-radius: 30%;
+    min-width: 1em;
+}
+#resultadoMaquina, #resultadoJugador{
+    width: 10em;
+    height: 10em;   
+}
+#resultadoMaquina{
+    background-color: rgba(240, 165, 27, 0.733);
+    border-top-right-radius: 30%;
+    border-bottom-right-radius: 30%;
+}
+
+#resultadoJugador{
+    background-color: rgba(27, 172, 240, 0.733);
+    border-top-left-radius: 30%;
+    border-bottom-left-radius: 30%;
+}
+#tituloResultadoDeJuego{
+    font-size: 5em;
+    font-family: gameover;
+    border-radius: 30px;
+    /* border-radius: 10% */
+    margin-bottom: 10px;
+}
+#imgWL{
+    width: 400px;
+    height: 350px;
+}
+.hvr-rectangle-out{
+    background:none;
+ }
+  
+/* SPINNER! */
+
+.spinner {
+    z-index: -2;
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    top: 10%;
+    left: 20%;
+    background-color: #333;
+  
+    border-radius: 100%;  
+    -webkit-animation: sk-scaleout 4.0s infinite ease-in-out;
+    animation: sk-scaleout 4.0s infinite ease-in-out;
+  }
+.container{
+    background-color: rgba(51, 117, 216, 0.459);
+    /* background-color: rgba(158, 156, 156, 0.114); */
+    border-radius: 10px;
+}
+.hidden{    
+    display: none;
+}
+  @-webkit-keyframes sk-scaleout {
+    0% { -webkit-transform: scale(0) }
+    100% {
+      -webkit-transform: scale(1.0);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes sk-scaleout {
+    0% { 
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    } 100% {
+      -webkit-transform: scale(1.0);
+      transform: scale(1.0);
+      opacity: 0;
+    }
+  }
+  /*FIN SPINER*/
+
+/* SELECCION MAQUINA! */
+.animacionSeleccion {
+    width: 40px;
+    height: 40px;
+  
+    position: relative;
+    margin: 100px auto;
+  }
+  
+  .double-bounce1, .double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #333;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+  }
+  
+  .double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+  
+  @-webkit-keyframes sk-bounce {
+    0%, 100% { -webkit-transform: scale(0.0) }
+    50% { -webkit-transform: scale(1.0) }
+  }
+  
+  @keyframes sk-bounce {
+    0%, 100% { 
+      transform: scale(0.0);
+      -webkit-transform: scale(0.0);
+    } 50% { 
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+    }
+  }
+  /*FIN SELECCION MAQUINA*/

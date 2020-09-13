@@ -1,0 +1,16 @@
+<div class="container col-10">
+  <nav class="navbar navbar-light bg-light">
+    <h1 style="font-size:50px">{{title}}</h1>
+    <a class="navbar-brand">
+      <div>
+        <img src="{{img}}" alt="Logo Utn-Fra" class="logoUtn">
+      </div>
+      <a *ngIf="isLogged && mostrarBoton" class="btnLink" id="btnLogOut" (click)="logout()">Logout</a>
+    </a>
+    <div class="specialPosition col-12">
+      <a *ngIf="srcLinkBoolean" routerLink="{{routerLinkk}}" class="btnLink">{{nameRouterLink}}</a>
+      <a *ngIf="routerLinkBoolean" href="{{srcLink}}" target="_blank" class="btnLink">{{nameLink}}</a>
+    </div>
+
+  </nav>
+</div>

@@ -1,0 +1,114 @@
+.centrado{
+    text-align: center;
+}
+.labelError{
+    font-size:10px;
+    margin: 0px;
+    color: red;
+}
+.Divterminos{
+    background-color: #3e3e3e13;
+    border-radius: 30px;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    overflow: hidden;
+    animation-duration: 5s;
+    animation-name: zoom;
+}
+
+.delay1s
+{
+    animation-delay: 1s;
+}
+.delay2s
+{
+    animation-delay: 2s;
+}
+
+p{
+    font-family: cursive;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+input{
+    border-radius: 30px;
+}
+#imgPerfil{
+    position: relative;
+}
+.header-Login{
+    margin-top: 100px;
+    display: inline-block;
+    background-color: rgba(128, 128, 128, 0.281);
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+.body-login{
+    padding-top: 2em;
+    background-color: rgba(128, 128, 128, 0.281);
+    padding-bottom: 2em;
+    border-radius: 30px;
+}
+
+.shadow-pop-tr  {
+	-webkit-animation: shadow-pop-tr 0.8s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+	        animation: shadow-pop-tr 0.8s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+@keyframes zoom {
+    from {
+        height: 0em;
+    }
+    15%{
+        height: 4em;
+    }
+    30%{
+        height: 4em;
+    }
+    50%{
+        /* height: 6em; */
+    }
+    75%{
+        /* height: 15em;     */
+    }      
+    to {
+        height:20.2em;
+    }
+  }
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%
+    }
+
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+@-webkit-keyframes shadow-pop-tr {
+  0% {
+            box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+            transform: translateX(0) translateY(0);
+  }
+
+  100% {
+            box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
+            transform: translateX(-8px) translateY(8px);
+  }
+}
+@keyframes shadow-pop-tr {
+    0% {
+                box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+                transform: translateX(0) translateY(0);           
+    }
+    50%{
+        background-color: rgba(255, 0, 0, 0.438);
+        }
+    25%{
+    background-color: rgba(0, 128, 0, 0.418);
+    }
+    100% {
+                box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
+                transform: translateX(-8px) translateY(8px);
+    }
+}

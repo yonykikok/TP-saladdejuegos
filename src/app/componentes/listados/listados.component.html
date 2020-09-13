@@ -1,0 +1,10 @@
+<app-cabecera title="Listado Top 3" img="../../../assets/imagenes/top3.png" routerLinkk="/Principal"
+        nameRouterLink="Volver" srcLinkBoolean="true"  [mostrarBoton]="true"></app-cabecera>
+
+
+<div class="container col-12 centrado">
+        <app-top3-game [listaTop3]="listaToptresPptls" tituloDelJuego="pptls"></app-top3-game>
+        <app-top3-game [listaTop3]="listaToptresPpt" tituloDelJuego="ppt"></app-top3-game>
+        <app-top3-game [listaTop3]="listaToptresAnagrama" tituloDelJuego="anagrama"></app-top3-game>
+        <app-top3-game [listaTop3]="listaToptresAgilidad" tituloDelJuego="agilidad"></app-top3-game>
+</div>

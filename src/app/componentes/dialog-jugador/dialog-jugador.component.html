@@ -1,0 +1,12 @@
+
+<div *ngIf="mostrarse" class="container">
+        <div class="card centrado" style="width: 48rem; height: 18rem;">
+                <img id="imgClose" src="../../../assets/imagenes/close.png" (click)="cerrarModal();">
+            <!-- <img class="card-img-top" id="imgPrincipal" src="{{producto.image}}" alt="Card image cap"> -->
+            <div class="card-body">
+                <h5 class="card-title">JUGADOR</h5>
+                <p class="card-text"><span></span> {{jugador.email}}</p>
+                <p class="card-text"><span>Puntaje: </span> {{jugador.puntaje}}</p>
+            </div>
+        </div>
+    </div>

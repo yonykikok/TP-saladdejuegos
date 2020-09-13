@@ -1,0 +1,28 @@
+img{
+    width: 30rem;
+    height: 30rem;
+}
+.button{
+    padding-left: 14%;
+    padding-right: 14%;
+    border-radius: 100px;
+    background-color: rgb(34, 111, 211);
+    color:white;
+}
+
+app-card-img-top{
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }

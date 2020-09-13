@@ -1,0 +1,30 @@
+<app-cabecera title="Login" img="../../../assets/imagenes/utn.png"> </app-cabecera>
+<div class="container centrado">
+  <div class="header-Login shadow-pop-tr">
+    <img id="imgPerfil " src="./assets/imagenes/login.png" alt="Avatar">
+  </div>
+  <br>
+  <div class="body-login col-6 offset-3 shadow-pop-tr">
+    <form [formGroup]="formLogin">
+      <div class="form-group">
+        <input type="email" class="form-control centrado" [(ngModel)]="user.email" name="email"
+          placeholder="Enter email" formControlName="email">
+        <label class="labelError" *ngIf="formLogin.get('email').hasError('required')">Ingrese Email</label>
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control centrado" [(ngModel)]="user.password" name="password"
+          placeholder="Password" formControlName="password">
+        <label class="labelError" *ngIf="formLogin.get('password').hasError('required')">Ingrese password</label>
+        <label class="labelError" *ngIf="formLogin.get('password').hasError('minlength')">Minimo 6 caracteres</label>
+        <label class="labelError" *ngIf="formLogin.get('password').hasError('maxlength')">Maximo 15 caracteres</label>
+      </div>
+      <button type="submit" class="btn btn-primary col-4" [disabled]="formLogin.invalid"
+        (click)="onLogin()">Ingresar</button>
+      <button type="submit" class="btn btn-success col-4 offset-2" routerLink="/Registro">Registrarse</button>
+      <div>
+        <label class="labelError" *ngIf="mostrarErrorInvalidUser">Datos Invalidos</label>
+        <label class="labelError" *ngIf="mostrarErrorInvalidMail">El mail no cumple con el estilo de un mail valido</label>
+      </div>
+    </form>
+  </div>
+</div>

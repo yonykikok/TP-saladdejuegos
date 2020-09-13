@@ -1,0 +1,78 @@
+.card{
+    display: inline-block;
+    border: none;
+}
+
+.text-Overflow-Hide{    
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+  }
+   
+.card-text{    
+    overflow: hidden;
+    text-overflow: ellipsis; 
+  }
+  .text-Overflow-Hide:hover{
+    white-space: normal; 
+  }
+  img{
+    width: 15rem;
+    height: 8rem;
+  }
+  .btn{
+    text-align: center;
+    border-radius: 10px;
+    min-width: 70%;
+    border: 2px dotted rgb(0, 0, 0);
+  }
+  .centrado{
+    text-align: center;
+  }
+
+  .delay1s{
+    animation: rotate-scale-up 1s linear both;
+    animation-delay: 1s;
+}
+.delay2s{
+    animation: rotate-scale-up 1s linear both;
+    animation-delay: 2s;
+}
+.delay3s{
+    animation: rotate-scale-up 1s linear both;
+    animation-delay: 3s;
+}
+
+.delay4s{
+    animation: rotate-scale-up 1s linear both;
+    animation-delay: 4s;
+}
+.inline-block{
+display: inline-block;
+}
+
+.rotate-scale-up {
+animation: rotate-scale-up 1s linear both;
+}
+@-webkit-keyframes rotate-scale-up {
+0% {
+      transform: scale(1) rotateZ(0);
+}
+50% {
+      transform: scale(2) rotateZ(180deg);
+}
+100% {
+      transform: scale(1) rotateZ(360deg);
+}
+}
+@keyframes rotate-scale-up {
+0% {
+      transform: scale(1) rotateZ(0);
+}
+50% {
+      transform: scale(2) rotateZ(180deg);
+}
+100% {
+      transform: scale(1) rotateZ(360deg);
+}
+}

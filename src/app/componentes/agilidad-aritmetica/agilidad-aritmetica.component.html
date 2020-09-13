@@ -1,0 +1,40 @@
+<app-cabecera title="Agilidad aritmetica" srcLink="/Juegos" routerLinkk="/Juegos" nameRouterLink="Volver"
+  img="../../../assets/imagenes/cerebro.jpg" srcLinkBoolean="true" [mostrarBoton]="true"> </app-cabecera>
+<br>
+
+<div class="container centrado">
+  <div *ngIf="juegoTerminado">
+    <h1>Su puntaje fue de {{contadorGanadas}}</h1>
+    <button class="btn btn-success" (click)="toggleJuegoTerminado()">Volver a jugar</button>
+  </div>
+  <form name="juego" *ngIf="!juegoTerminado">
+
+    <div>
+      <h4>Primer número</h4> <input [(ngModel)]="nuevoJuego.numeroAleatorioUno" placeholder="ingrese numero"
+        name="numeroUno" type="text" class="form-control" style="width:50%" readonly />
+    </div>
+    <div>
+      <h4> Operador </h4> <input [(ngModel)]="nuevoJuego.operador" placeholder="ingrese numero" name="operador"
+        type="text" class="form-control" style="width:50%" readonly />
+    </div>
+    <div>
+      <h4> Segundo número</h4>
+      <input [(ngModel)]="nuevoJuego.numeroAleatorioDos" placeholder="ingrese numero" name="numeroDos" type="text"
+        class="form-control" style="width:50%" readonly />
+    </div>
+    <div>
+      <h4>Respuesta</h4><input [(ngModel)]="nuevoJuego.numeroIngresado" placeholder="ingrese numero"
+        name="numeroIngresado" type="text" class="form-control" style="width:50%" />
+    </div>
+    <br>
+    <h2 [hidden]="ocultarVerificar"><button (click)="verificar()" class="btn btn-success btn-lg">Verificar
+        {{Tiempo}}
+      </button></h2>
+
+      <h2 [hidden]="!ocultarVerificar"><button (click)="NuevoJuego()" class="btn btn-info btn-lg">Nuevo</button></h2>
+    <h3 [hidden]="!nuevoJuego.gano">Logro superar el desafio, bien hecho!</h3>
+    <h3 *ngIf="mostrar" [hidden]="nuevoJuego.gano">Se acabo el tiempo, no desanimes</h3>
+
+
+  </form>
+</div>

@@ -1,0 +1,43 @@
+<app-cabecera title="Registro" img="../../../assets/imagenes/utn.png"> </app-cabecera>
+<div class="container centrado">
+  <div *ngIf="aceptoTerminos">
+    <div class="header-Login shadow-pop-tr">
+      <img id="imgPerfil " src="./assets/imagenes/login.png" alt="Avatar">
+    </div>
+    <br>
+    <div class="body-login col-6 offset-3 shadow-pop-tr">
+        <form [formGroup]="formLogin">
+            <div class="form-group">
+              <input type="email" class="form-control centrado" [(ngModel)]="user.email" name="email"
+                placeholder="Enter email" formControlName="email">
+              <label class="labelError" *ngIf="formLogin.get('email').hasError('required')">Ingrese Email</label>
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control centrado" [(ngModel)]="user.password" name="password"
+                placeholder="Password" formControlName="password">
+              <label class="labelError" *ngIf="formLogin.get('password').hasError('required')">Ingrese password</label>
+              <label class="labelError" *ngIf="formLogin.get('password').hasError('minlength')">Minimo 6 caracteres</label>
+              <label class="labelError" *ngIf="formLogin.get('password').hasError('maxlength')">Maximo 15 caracteres</label>
+            </div>
+        <button type="submit" class="btn btn-primary col-4" (click)="onRegister()"  [disabled]="formLogin.invalid">Registrar</button>
+        <button type="submit" class="btn btn-danger col-4 offset-2" routerLink="/Login">Salir</button>
+        <div>
+            <label class="labelError" *ngIf="mostrarErrorUsuarioExistente">Ese correo ya esta en uso</label>
+            <label class="labelError" *ngIf="mostrarErrorInvalidMail">El mail no cumple con el estilo de un mail valido</label>
+          </div>
+      </form>
+    </div>
+  </div>
+  <br>
+
+  <div class="Divterminos col-8 offset-2" *ngIf="!aceptoTerminos">
+    <h2 id="terminos">Terminos y condiciones</h2>
+    <p>La pagina se compromete a utilizar su informacion para comercializarla con agentes externos</p>
+    <p class="delay1s">La pagina no puede garantizar el correcto funcionamiento de sus aplicaciones</p>
+    <p class="delay2s">La pagina tomara posesion de sus bienes y/o familias</p>
+    <br>
+    <button class="btn btn-danger col-4" (click)="aceptarTerminos()">Acepto</button>
+    <button class="btn btn-primary col-4 offset-2"routerLink="/Login">No acepto</button>
+  </div>
+
+</div>

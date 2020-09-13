@@ -1,0 +1,34 @@
+<div class="card text-center">
+    <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+                <a [className]="'nav-link '+classNameUno" (click)="seleccionarTabUno()">{{nameTabUno}}</a>
+            </li>
+            <li class="nav-item">
+                <a [className]="'nav-link '+classNameDos" (click)="seleccionarTabDos()">{{nameTabDos}}</a>
+            </li>
+            <li class="nav-item">
+                <a [className]="'nav-link '+classNameTres">{{nameTabTres}}</a>
+            </li>
+        </ul>
+    </div>
+    <div *ngIf="tabUnoBoolean" class="card-body ">
+        <h5 class="card-title">{{titleTabUno}}</h5>
+        <p class="card-text">{{descriptionTabUno}}
+        </p>
+    </div>
+    <div *ngIf="tabDosBoolean" class="card-body">
+
+        <app-card-img-top description="Con las tecnologias WEB que permiten desarrollar aplicaciones multiplataforma"
+            title="Nuevas Tecnologias" class="mostrarTexto" img="../../../assets/imagenes/quiensoy1.png">
+        </app-card-img-top>
+        <app-card-img-top description="Principalmente orientada a la experiencia del usuario, garantizando que su 
+            funcionamieto sea fluido y pensado en el comportamiento del usuario y en la funcionalidad."
+            title="Orientacion" class="mostrarTexto" img="../../../assets/imagenes/quiensoy2.png">
+        </app-card-img-top>
+
+        <app-card-img-top description="Para los sistemas operativos lideres en el mercado del consumo masivo."
+            title="Diseñado" class="mostrarTexto" img="../../../assets/imagenes/quiensoy3.png"></app-card-img-top>
+
+    </div>
+</div>

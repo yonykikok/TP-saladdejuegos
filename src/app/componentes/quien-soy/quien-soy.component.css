@@ -1,0 +1,99 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.imagenDeQuienSoy{
+    width: 100%;
+   
+    }
+body {
+    font: 20px Montserrat, sans-serif;
+    line-height: 1.8;
+    color: #f5f6f7;
+}
+p {font-size: 16px;}
+.margin {margin-bottom: 45px;}
+.bg-1 { 
+    background-color: #1abc9c; /* Green */
+    color: #ffffff;
+}
+.bg-2 { 
+    background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+}
+.bg-3 { 
+    background-color: #ffffff; /* White */
+    color: #555555;
+}
+.bg-4 { 
+    background-color: #2f2f2f; /* Black Gray */
+    color: #fff;
+}
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+.navbar-nav  li a:hover {
+    color: #1abc9c !important;
+}
+  
+.centrado{
+    text-align: center;
+}
+.imagenPerfil{
+    border-radius: 100%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    width: 18em;
+    height: 18em;
+    opacity: 0.5;
+    background-color: blue;
+}
+
+
+.imagenPerfil{
+    animation-duration: 4s;
+    animation-name: fondoColores;
+}
+
+@keyframes fondoColores{
+    from{
+        width: 2em;
+        height: 2em;
+    }
+    25%{
+        width:18em;
+        height: 18em;
+        padding: 6em;
+        background-color: rgba(255, 0, 0, 0.500);
+
+    }
+    50%{
+        padding: 2em;
+        background-color: rgba(0, 0, 255, 0.500);
+    }
+    75%{
+        
+        padding: 6em;
+        background-color: rgba(255, 255, 0, 0.500);
+    }
+
+    85%{
+        padding-left: 10em;
+        padding-right: 10em;
+        background-color: rgba(0, 128, 0, 0.500);
+    }
+    to{
+
+    }
+}

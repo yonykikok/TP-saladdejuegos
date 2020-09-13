@@ -1,0 +1,28 @@
+*{
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 100%;
+}
+
+.centrado{
+    text-align:center;
+}
+.imgJuego{
+    display: inline-block;
+    height: 7em;
+    width: 7em;
+}
+.imgTrofeo{
+    height: 4em;
+    width: 4em;
+}
+.divBody{
+    display: inline-block;
+}
+
+.lugar{
+    background-color: rgba(0, 0, 255, 0.466);
+    display: inline-block;
+    border-radius: 40px;
+    padding :10px;
+}

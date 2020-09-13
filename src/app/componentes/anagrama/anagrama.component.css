@@ -1,0 +1,177 @@
+.centrado{
+    text-align: center;
+}
+h5{
+  font-family: fantasy;
+  margin: 0;
+}
+p{
+  font-family: fantasy;
+  font-size: 300%;
+}
+#divContadorIntentos{
+  position: absolute;
+}
+.borderTransicionColores{
+  animation-name: trancicion-colores-border;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-delay: 3;
+}
+.btn-danger{
+  background-color: rgba(255, 0, 0, 0.521);
+}
+
+.btn-primary{
+  background-color: rgba(17, 0, 255, 0.521);
+}
+#btnComparar{
+  font-weight: bold;
+  animation-name: trancicion-colores;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-delay: 3;
+}
+@keyframes trancicion-colores-border{
+  from{
+    border:solid rgba(255, 0, 0, 0.288) 3px;
+  }
+  50%{
+    border:solid rgba(0, 0, 255, 0.288) 3px;
+  }
+  to{
+    border:solid rgba(0, 255, 0, 0.288) 3px;
+  }
+}
+@keyframes trancicion-colores{
+  from{
+    background-color: rgba(255, 0, 0, 0.288);
+  }
+  50%{
+    background-color: rgba(0, 0, 255, 0.288);
+  }
+  to{
+    background-color: rgba(0, 255, 0, 0.288);
+  }
+}
+
+#inputPalabra{
+  margin-top: 30px;
+}
+.container{
+    background: url("../../../assets/imagenes/background-letras.jpg") center center/cover;
+    height: 400px;
+    border-radius: 30px;
+}
+h1 {
+    background-color: rgba(255, 166, 0, 0.671);
+    border-radius: 10px;
+    display: inline-block;
+}
+img{
+    width: 4em;
+    height: 4em;
+    border: 2px solid black;
+    margin-right: 2px;
+    padding:3px;
+}
+
+.marginBottom{
+    margin-bottom: 20px;
+} 
+#btnComenzar{
+    border-radius: 100%;
+    height: 80%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    font-size: 300%;
+}
+.overflowHidden{
+    overflow: hidden;
+}
+img {
+    animation-duration: 3s;
+    animation-name: slidenOut;
+  }
+  .buttonAnimado {
+    animation-duration: 2s;
+    animation-name: slideInLeft;
+  }
+ .entradaDerecha{
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-name: entradaDerecha;
+  }
+  .entradaIzquierda{
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-name: entradaIzquierda;
+  }
+   
+  
+  @keyframes entradaIzquierda {
+    from {
+      margin-left: 100%;
+    }
+    to {
+      margin-left: 0%;
+    }
+  }
+  @keyframes entradaDerecha {
+    from {
+      margin-right: 100%;
+    }
+  
+    to {
+      margin-right: 0%;
+    }
+  }
+  @keyframes slideInLeft {
+    from {
+      margin-left: 100%;
+      background-color: rgb(255, 0, 0);
+    }
+    85% {
+      background-color: rgb(0, 0, 255);
+      margin-top: 20%
+      }      
+    70% {
+      background-color: rgb(0, 128, 0);
+      margin-bottom: 30%
+    }
+    
+    60% {
+      background-color: rgb(255, 255, 0);
+      margin-left: 90%
+    }
+    
+    50% {
+        margin-right: 60%
+    }
+    40% {
+      background-color: violet;
+      margin-bottom: 30%
+    }
+    30% {
+        margin-top: 20%
+    }
+    20% {
+        margin-left: 50%
+    }
+    10% {
+        margin-top: 20%
+    }
+    to {
+      margin-left: 0%;
+    }
+  }
+  
+  @keyframes slidenOut {
+    from {
+      margin-top: 100%;
+    }
+  
+    to {
+      margin-top: 0%;
+    }
+  }

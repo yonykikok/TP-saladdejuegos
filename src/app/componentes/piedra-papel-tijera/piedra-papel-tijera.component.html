@@ -1,0 +1,56 @@
+<app-cabecera title="Piedra papel tijera" srcLinkBoolean="true" routerLinkk="/Juegos"
+    nameRouterLink="Volver" img="../../../assets/imagenes/ppt.png" [mostrarBoton]="true">
+</app-cabecera>
+<br>
+<!-- Card reglas de juego -->
+<div id="reglasDeJuego" class="centrado">
+    <div class="card hidden" id="headerCardReglas" style="width: 25rem;">
+        <img id="iconExit" (click)="ocultarCardReglas()" src="../../../assets/icons/exitIcon2.png">
+        <img src="../../../assets/imagenes/pptreglas.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <p class="card-text">Tijeras cortan el papel, papel tapa piedra, piedra aplasta
+                tijeras.</p>
+            <img src="../.././../assets/imagenes/sound.png" id="imgSpeeker" (click)="reproducirExplicacion()"
+                alt="escuchar reglas">
+        </div>
+    </div>
+</div>
+<!-- fin Card reglas de juego -->
+<div class="container centrado" id="contenedorPrincipal">
+        <img src="../../../assets/imagenes/corona.png" *ngIf="esTop1"  id="imgCorona" alt="top1">
+
+    <label (click)="mostrarCardReglas()" class="hvr-rectangle-out">Como se juega?</label>
+    <div class="row">
+        <div class="col-2 centrado">
+            <img *ngFor="let juego of opcionesDeJuego" class="imagenJuego visible hvr-buzz" id="imagenJuegoHover"
+                (click)="CalcukarJugada(juego)" src="../../../assets/imagenes/{{juego}}.png" alt="Foto {{juego}}">
+        </div>
+        <div class="col-8 centrado fondo">
+            <label class="puntaje" id="puntajeJugador">{{contadorGanadas}}</label>
+            <label class="puntaje" id="puntajeMaquina">{{contadorPerdidas}}</label>
+            <div *ngIf="!partidaTerminada">
+                <img src="../../../assets/imagenes/pptreglas.png" class="spinner" alt="">
+            </div>
+            <div>
+                <button class="btn btn-primary" id="tituloResultadoDeJuego"
+                    *ngIf="mostrarQuienGano && !partidaTerminada"> {{mensajePartida}}</button>
+            </div>
+            <div *ngIf="partidaTerminada">
+                <app-alerta-custom imagen=""></app-alerta-custom>
+                <img id="imgWL" src="{{imagenG_P}}" alt="imagen resultado de partida">
+            </div>
+            <div class="centrado">
+                <button class="btn btn-primary btnSize" (click)="reiniciarPartida()" *ngIf="partidaTerminada">Volver a
+                    Jugar</button>
+            </div>
+            <img class="imagenJuego visible resultados" id="resultadoJugador" *ngIf="eleccionJugador"
+                src="../../../assets/imagenes/{{eleccionJugador}}.png" alt="Foto {{juego}}">
+            <img class="imagenJuego visible resultados" id="resultadoMaquina" *ngIf="eleccionJugador"
+                src="../../../assets/imagenes/{{eleccionMaquina}}.png" alt="Foto {{juego}}">
+        </div>
+        <div class="col-2 centrado">
+            <img *ngFor="let juego of opcionesDeJuego" class="imagenJuego visible hvr-buzz"
+                src="../../../assets/imagenes/{{juego}}.png" alt="Foto {{juego}}">
+        </div>
+    </div>
+</div>

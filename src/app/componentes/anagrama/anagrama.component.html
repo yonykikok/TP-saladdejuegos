@@ -1,0 +1,40 @@
+<app-cabecera title="Anagrama" srcLink="/Juegos" routerLinkk="/Juegos" nameRouterLink="Volver"
+  img="../../../assets/imagenes/anagrama.png" srcLinkBoolean="true" [mostrarBoton]="true"> </app-cabecera>
+<br>
+<div class="container centrado col-8">
+  <br>
+
+  <div *ngIf="palabra && empesarPartida" class="marginBottom overflowHidden">
+    <div id="divContadorIntentos">
+      <h5>Vidas</h5>
+      <p>{{vidas}}</p>
+    </div>
+    <img *ngFor="let letra of arrayPalabra" src="../../../assets/imagenes/abc/{{letra}}.png">
+  </div>
+
+  <button *ngIf="!empesarPartida" id="btnComenzar" class="btn btn-primary col-4 buttonAnimado"
+    (click)="comenzar()">Empezar
+    Partida</button>
+  <div *ngIf="empesarPartida">
+
+    <div>
+      <h1 *ngIf="mostrarPalabraSecreta">La palabra era: "{{palabra}}"</h1>
+    </div>
+    <div class=" entradaDerecha">
+      <button class="btn btn-primary col-3" (click)=cambiarPalabraYDescontar()>cambiar palabra</button>
+    </div>
+    <div class=" entradaIzquierda">
+      <button class="btn btn-danger col-3" *ngIf="!mostrar" (click)=cambiarEstado()>
+        Me rindo</button>
+    </div>
+    <button class="btn btn-info col-3 " *ngIf="mostrar" (click)=mostrarPalabra()>Mostrar palabra </button>
+
+    <div class="input-group mb-3 col-8 offset-2" id="inputPalabra">
+      <div class="input-group-prepend">
+        <button class="input-group-text " id="btnComparar" (click)="compararPalabra()">Comparar</button>
+      </div>
+      <input type="input" class="form-control borderTransicionColores centrado" placeholder="palabra"
+        [(ngModel)]="palabraIngresada" name="palabra ingresada" aria-label="palabra" aria-describedby="basic-addon1">
+    </div>
+  </div>
+</div>

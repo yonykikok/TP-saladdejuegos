@@ -1,0 +1,36 @@
+<div class="container col-10 centrado">
+    <div>
+        <app-dialog-jugador [mostrarse]="mostrarDetalleDelJugador" [jugador]="usuarioAMostrar" (toggleEvent)="toggleDialog()"></app-dialog-jugador>
+        <img class="imgJuego" src="../../../assets/imagenes/{{tituloDelJuego}}.png" alt="">
+
+        <button *ngIf="primerPuesto.puntaje" class="lugar col-3" (click)="mostrarUsuarioUno()">
+            <!-- TOP1 -->
+            <img src="../../../assets/imagenes/primerLugar.png" class="imgTrofeo" alt="primer puesto">
+            <div class="divBody">
+                <label>Puntaje: {{primerPuesto.puntaje}}</label>
+            </div>
+        </button>
+        <!-- TOP2 -->
+        <button *ngIf="segundoPuesto.puntaje" class="lugar col-3" (click)="mostrarUsuarioDos()">
+            <img src="../../../assets/imagenes/segundoLugar.png" class="imgTrofeo" alt="primer puesto">
+            <div class="divBody">
+                <label>Puntaje: {{segundoPuesto.puntaje}}</label>
+            </div>
+        </button>
+        <!-- TOP3 -->
+        <button *ngIf="tercerPuesto.puntaje" class="lugar col-3" (click)="mostrarUsuarioTres()">
+            <img src="../../../assets/imagenes/tercerLugar.png" class="imgTrofeo" alt="primer puesto">
+            <div class="divBody">
+                <label>Puntaje: {{tercerPuesto.puntaje}}</label>
+            </div>
+        </button>
+    </div>
+
+
+    <!-- <div>
+        <img src="../../../assets/imagenes/segundoLugar.png" class="imgTrofeo" alt="segundo puesto">
+    </div>
+    <div>
+        <img src="../../../assets/imagenes/tercerLugar.png" class="imgTrofeo" alt="tercer puesto">
+    </div> -->
+</div>

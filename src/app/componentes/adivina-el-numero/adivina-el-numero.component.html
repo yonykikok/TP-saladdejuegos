@@ -1,0 +1,29 @@
+<app-cabecera title="Adivina el numero" srcLink="/Juegos" routerLinkk="/Juegos" nameRouterLink="Volver"
+  img="../../../assets/imagenes/utn.png" srcLinkBoolean="true" [mostrarBoton]="true"> </app-cabecera>
+<br>
+<div class="container centrado">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <form name="juego">
+    <div id="intentos">
+      <h5>Intentos</h5>
+      <label>{{contador}}</label>
+    </div>
+    <div>
+      <h1>Ingrese numero</h1> <input [(ngModel)]="nuevoJuego.numeroIngresado" placeholder="ingrese numero"
+        name="numeroIngresado" type="text" class="form-control centrado overflowHidden" style="width:50%" />
+    </div>
+    <h1 class="overflowHidden">{{nuevoJuego.numeroIngresado}} </h1>
+
+    <h2 [hidden]="ocultarVerificar"><button *ngIf="nuevoJuego.numeroSecreto!=0" (click)="verificar()"
+        class="btn btn-success btn-lg">Verificar</button></h2>
+
+    <button *ngIf="nuevoJuego.numeroSecreto==0 " (click)="generarnumero()" class="btn btn-primary btn-lg">Nuevo número
+      secreto</button>
+    <button *ngIf="mostrarAyuda" class="btn btn-info btn-lg" (click)="mostrarMensajeDeAyuda()">Ayuda</button>
+    <h3 *ngIf="mostrarAyuda">{{ayuda}}</h3>
+    <h3 [hidden]="!nuevoJuego.gano">Adivino el número, felicidades!</h3>
+  </form>
+  <div id="snackbar">{{Mensajes}}</div>
+
+</div>

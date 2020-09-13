@@ -1,0 +1,56 @@
+*{
+    font-family: monospace;
+}
+#btnLogOut{ 
+    position: relative;
+    font-size: 15px;;
+    border: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(204, 117, 17);
+    color:white;
+    border-radius: 30px;
+    text-decoration: none;
+    float: right;
+}
+.panel
+{
+    height: 200px;
+    background-image: url("/TP_LAV4_2017/assets/imagenes/cabecera.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.navbar{
+    border-radius: 10px;
+}
+.logoUtn{
+    float: right;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    }
+
+/* .specialPosition{
+    margin-top:2em;
+    position: absolute;
+    float: left;
+} */
+.specialPosition>a:last-child{
+    margin-left: 20px;
+}
+    
+.btnLink{
+    border: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(17, 157, 204);
+    color:white;
+    border-radius: 30px;
+    text-decoration: none;
+}
+    
+.btnLink:hover{
+    background-color: rgb(44, 145, 179);
+}
